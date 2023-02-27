@@ -2,7 +2,6 @@ import './style.css'
 
 const keycode = document.querySelector("#keycode");
 const doubleKeys = ["Control", "Shift", "Alt"];
-let elements = document.querySelectorAll(".keyboard-line span");
 
 window.addEventListener("keydown", (e) => {
   e.preventDefault();
@@ -28,12 +27,26 @@ window.addEventListener("keydown", (e) => {
 });
 
 
-window.addEventListener("keyup", () => {
+window.addEventListener("keyup", (e) => {
   setTimeout(() => {
-    elements.forEach(element => {
-      element.classList.remove("active");
-    });
-  }, 100);
+    try {
+      if (doubleKeys.find((key) => e.key === key)) {
+        let elements = document.querySelectorAll(`[data-key='${e.key}']`);
+        elements.forEach(element => {
+          element.classList.remove("active");
+        });
+      } else {
+        if (e.code == "Backslash") {
+          document.querySelector('[data-key="\\\\"]').classList.remove("active");
+        } else {
+          document.querySelector(`[data-key='${e.key}']`).classList.remove("active");
+        }
+      }
+    }
+    catch(err) {
+      return true;
+    }
+  }, 50);
 });
 
 
