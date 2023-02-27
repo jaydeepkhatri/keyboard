@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Keyboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <div class="keyboard">
+      <div class="keyboard-line">
+        <span data-key="`">`</span>
+        <span data-key="1">1</span>
+        <span data-key="2">2</span>
+        <span data-key="3">3</span>
+        <span data-key="4">4</span>
+        <span data-key="5">5</span>
+        <span data-key="6">6</span>
+        <span data-key="7">7</span>
+        <span data-key="8">8</span>
+        <span data-key="9">9</span>
+        <span data-key="0">0</span>
+        <span data-key="-">-</span>
+        <span data-key="=">=</span>
+        <span class="bigkey" data-key="Backspace">Backspace</span>
+      </div>
+      <div class="keyboard-line">
+        <span class="bigkey" data-key="Tab">Tab</span>
+        <span data-key="q">q</span>
+        <span data-key="w">w</span>
+        <span data-key="e">e</span>
+        <span data-key="r">r</span>
+        <span data-key="t">t</span>
+        <span data-key="y">y</span>
+        <span data-key="u">u</span>
+        <span data-key="i">i</span>
+        <span data-key="o">o</span>
+        <span data-key="p">p</span>
+        <span data-key="[">[</span>
+        <span data-key="]">]</span>
+        <span class="bigkey" data-key="\">\</span>
+      </div>
+      <div class="keyboard-line">
+        <span class="bigkey" data-key="CapsLock">Caps Lock</span>
+        <span data-key="a">a</span>
+        <span data-key="s">s</span>
+        <span data-key="d">d</span>
+        <span data-key="f">f</span>
+        <span data-key="g">g</span>
+        <span data-key="h">h</span>
+        <span data-key="j">j</span>
+        <span data-key="k">k</span>
+        <span data-key="l">l</span>
+        <span data-key=";">;</span>
+        <span data-key="'">'</span>
+        <span class="bigkey" data-key="Enter">Enter</span>
+      </div>
+      <div class="keyboard-line">
+        <span class="bigkey" data-key="Shift">Shift</span>
+        <span data-key="z">z</span>
+        <span data-key="x">x</span>
+        <span data-key="c">c</span>
+        <span data-key="v">v</span>
+        <span data-key="b">b</span>
+        <span data-key="n">n</span>
+        <span data-key="m">m</span>
+        <span data-key=",">,</span>
+        <span data-key=".">.</span>
+        <span data-key="/">/</span>
+        <span class="bigkey" data-key="Shift">Shift</span>
+      </div>
+      <div class="keyboard-line">
+        <span data-key="Control">Ctrl</span>
+        <span data-key="Alt">Alt</span>
+        <span class="bigkey" data-key="Space">Space</span>
+        <span data-key="Alt">Alt</span>
+        <span data-key="Control">Ctrl</span>
+      </div>
+    </div>
+
+    <div class="key-info">
+      <span>Key Code</span>
+      <span id="keycode"></span>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

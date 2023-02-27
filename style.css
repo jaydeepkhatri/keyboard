@@ -1,0 +1,62 @@
+:root {
+  --dark: #232b32;
+  --white: #FFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark);
+  color: #FFF;
+  font-family: 'Alata', sans-serif;
+}
+
+.keyboard {
+  max-width: 820px;
+  margin: 160px auto;
+}
+
+.keyboard-line {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bigkey {
+  flex: 1;
+  white-space: nowrap;
+}
+
+.keyboard-line span {
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid var(--white);
+  padding: 10px;
+  min-width: 43px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  line-height: 19px;
+  transition: 0.05s ease-in-out;
+}
+
+.keyboard-line span.active,
+.keyboard-line span:hover {
+  color: var(--dark);
+  background: var(--white);
+}
+
+.key-info {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#keycode {
+  font-size: 4em;
+}
