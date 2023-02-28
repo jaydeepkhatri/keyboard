@@ -7,5 +7,5 @@
 ```sh
 git clone https://github.com/jaydeepkhatri/keyboard.git
 npm i
-npm start
+npm run dev
 ```
