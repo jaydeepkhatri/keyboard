@@ -1,5 +1,7 @@
 # Keyboard
 
+[Preview](https://keyboard2.netlify.app/)
+
 ![Img](./public/preview.png)
 
 ## Installation
