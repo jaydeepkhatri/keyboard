@@ -60,3 +60,13 @@ body {
 #keycode {
   font-size: 4em;
 }
+
+.github {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.github i {
+  font-size: 1.25em;
+}
