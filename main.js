@@ -22,7 +22,7 @@ window.addEventListener("keydown", (e) => {
       if (e.code == "Backslash") {
         getElements('[data-key="\\\\"]').classList.add("active");
       } else {
-        getElements(`[data-key='${e.key}']`).classList.add("active");
+        getElements(`[data-key='${e.key.toLocaleLowerCase()}']`).classList.add("active");
       }
     }
   }
@@ -44,7 +44,7 @@ window.addEventListener("keyup", (e) => {
         if (e.code == "Backslash") {
           getElements('[data-key="\\\\"]').classList.remove("active");
         } else {
-          getElements(`[data-key='${e.key}']`).classList.remove("active");
+          getElements(`[data-key='${e.key.toLocaleLowerCase()}']`).classList.remove("active");
         }
       }
     }
