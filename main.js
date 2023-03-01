@@ -3,6 +3,11 @@ import './style.css'
 const keycode = document.querySelector("#keycode");
 const doubleKeys = ["Control", "Shift", "Alt"];
 
+function getElements(el) {
+  return document.querySelector(el);
+}
+
+// key pressed
 window.addEventListener("keydown", (e) => {
   e.preventDefault();
   keycode.innerHTML = e.keyCode;
@@ -15,9 +20,9 @@ window.addEventListener("keydown", (e) => {
       });
     } else {
       if (e.code == "Backslash") {
-        document.querySelector('[data-key="\\\\"]').classList.add("active");
+        getElements('[data-key="\\\\"]').classList.add("active");
       } else {
-        document.querySelector(`[data-key='${e.key}']`).classList.add("active");
+        getElements(`[data-key='${e.key}']`).classList.add("active");
       }
     }
   }
@@ -26,7 +31,7 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
-
+//key lift
 window.addEventListener("keyup", (e) => {
   setTimeout(() => {
     try {
@@ -37,9 +42,9 @@ window.addEventListener("keyup", (e) => {
         });
       } else {
         if (e.code == "Backslash") {
-          document.querySelector('[data-key="\\\\"]').classList.remove("active");
+          getElements('[data-key="\\\\"]').classList.remove("active");
         } else {
-          document.querySelector(`[data-key='${e.key}']`).classList.remove("active");
+          getElements(`[data-key='${e.key}']`).classList.remove("active");
         }
       }
     }
