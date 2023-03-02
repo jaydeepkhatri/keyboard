@@ -10,6 +10,7 @@ function getElements(el) {
 // key pressed
 window.addEventListener("keydown", (e) => {
   e.preventDefault();
+  console.log(e);
   keycode.innerHTML = e.keyCode;
 
   try {
@@ -22,7 +23,11 @@ window.addEventListener("keydown", (e) => {
       if (e.code == "Backslash") {
         getElements('[data-key="\\\\"]').classList.add("active");
       } else {
-        getElements(`[data-key='${e.key.toLocaleLowerCase()}']`).classList.add("active");
+        if (e.key.length === 1 && e.key.toLocaleLowerCase === e.key) {
+          getElements(`[data-key='${e.key}']`).classList.add("active");
+        } else {
+          getElements(`[data-key='${e.key.toLowerCase()}']`).classList.add("active");
+        }
       }
     }
   }
@@ -31,7 +36,7 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
-//key lift
+//key lift 
 window.addEventListener("keyup", (e) => {
   setTimeout(() => {
     try {
@@ -44,7 +49,12 @@ window.addEventListener("keyup", (e) => {
         if (e.code == "Backslash") {
           getElements('[data-key="\\\\"]').classList.remove("active");
         } else {
-          getElements(`[data-key='${e.key.toLocaleLowerCase()}']`).classList.remove("active");
+          if (e.key.length === 1 && e.key.toLocaleLowerCase === e.key) {
+            getElements(`[data-key='${e.key}']`).classList.remove("active");
+          } else {
+            getElements(`[data-key='${e.key.toLowerCase()}']`).classList.remove("active");
+          }
+          // getElements(`[data-key='${e.key}']`).classList.remove("active");
         }
       }
     }
